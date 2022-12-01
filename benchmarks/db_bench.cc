@@ -596,7 +596,7 @@ class Benchmark {
         if (FLAGS_use_existing_db) {
           std::fprintf(stdout, "%-12s : skipped (--use_existing_db is true)\n",
                        name.ToString().c_str());
-          method = nullptr;
+          method = nullptr; // comment this line, 可以不生成新数据库但是可以进行写测试
         } else {
           delete db_;
           db_ = nullptr;
